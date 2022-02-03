@@ -7,7 +7,8 @@ using namespace std;
 using namespace cv;
 
 #define byte unsigned char
-// 有问题
+
+
 __global__ void SobelInCuda(const byte* src, byte* dst, const int width, const int height){
     int idx = blockDim.x * blockIdx.x + threadIdx.x;
     int idy = blockDim.y * blockIdx.y + threadIdx.y;
